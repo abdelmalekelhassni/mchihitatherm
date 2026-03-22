@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCHICHITA SOLUTIONS THERM - Installation & Maintenance de Chaudières</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-blue: #003153;      /* Bleu profond */
+            --primary-orange: #FF8C00;    /* Orange vif */
+            --light-gray: #f5f5f5;
+            --dark-gray: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .logo span {
+            color: var(--primary-orange);
+        }
+
+        .logo small {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: #ddd;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-orange);
+        }
+
+        .phone-header {
+            background: var(--primary-orange);
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.2s;
+        }
+
+        .phone-header:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0,49,83,0.8), rgba(0,49,83,0.8)), url('image1.jpeg');
+            background-size: cover;
+            background-position: center;
+            min-height: 550px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h1 span {
+            color: var(--primary-orange);
+            border-bottom: 3px solid var(--primary-orange);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .contact-info {
+            font-size: 1.2rem;
+            margin: 1.5rem 0;
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 50px;
+            display: inline-block;
+        }
+
+        .hero .contact-info i {
+            color: var(--primary-orange);
+            margin-right: 0.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: var(--primary-orange);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #e67e00;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid white;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        /* Section Services */
+        .services {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+            border-bottom: 4px solid var(--primary-orange);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+.about {
+    background: var(--light-gray);
+    padding: 5rem 2rem;
+    text-align: center; 
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    text-align: center; 
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    text-align: center; 
+}
+
+.about-content .name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-orange);
+    margin-bottom: 1rem;
+    text-align: center; 
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    text-align: center; 
+}
+
+.contact-details {
+    margin-top: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    text-align: center; 
+}
+
+.contact-details div {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    text-align: center; 
+}
+
+        /* Galerie (photos de travaux) */
+        .gallery {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 3rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Zone d'intervention */
+        .zone {
+            background: var(--primary-blue);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .zone h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-orange);
+        }
+
+        .zone p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.2rem;
+        }
+
+        .zone-cities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            list-style: none;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .zone-cities li {
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 500;
+            border: 1px solid var(--primary-orange);
+        }
+
+        /* Contact */
+        .contact {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .contact .sub {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .contact-info-large {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            min-width: 250px;
+            border-bottom: 3px solid var(--primary-orange);
+        }
+
+        .contact-card i {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .contact-card .label {
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card .value {
+            font-size: 1.3rem;
+            color: var(--primary-orange);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-form {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background: var(--primary-orange);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background: #e67e00;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-orange);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: var(--primary-blue);
+                padding: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        /* Popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-align: center;
+            border-top: 5px solid var(--primary-orange);
+        }
+        .popup.active {
+            display: block;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+        .overlay.active {
+            display: block;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                MCHICHITA <span>THERM</span><br>
+                <small>SOLUTIONS</small>
+            </div>
+            <div class="nav-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#services">Services</a>
+                <a href="#about">À propos</a>
+                <a href="#gallery">Réalisations</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a href="tel:+212661996250" class="phone-header">
+                <i class="fas fa-phone-alt"></i> 06.61.99.62.50
+            </a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1><span>MCHICHITA THERM SOLUTIONS</span></h1>
+            <p>Installation et Maintenance de Chaudières</p>
+            <div class="contact-info">
+                <i class="fas fa-user"></i> ELHASSNI Abdelmalek<br>
+                <i class="fas fa-phone"></i> 06.61.99.62.50<br>
+                <i class="fas fa-envelope"></i> mchichitathermsolutions@gmail.com
+            </div>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Devis gratuit</a>
+                <a href="tel:+212661996250" class="btn-secondary">Appel</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Nos services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-tools"></i>
+                <h3>Installation de chaudières</h3>
+                <p>Installation de chaudières gaz, fioul, électriques et à condensation. Matériel de qualité et pose soignée.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-wrench"></i>
+                <h3>Maintenance & entretien</h3>
+                <p>Contrats d'entretien annuel pour garantir la sécurité et la performance de votre installation.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Dépannage d'urgence</h3>
+                <p>Intervention rapide en cas de panne, même le week-end. Numéro d'urgence disponible 7j/7.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-sync-alt"></i>
+                <h3>Remplacement chaudière</h3>
+                <p>Remplacez votre ancienne chaudière par un modèle plus économique et écologique.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 >Votre expert de confiance</h2>
+                <div class="name">ELHASSNI Abdelmalek</div>
+                <p>Artisan chauffagiste passionné, je mets mon expérience au service des particuliers et des professionnels au maroc. La satisfaction client est ma priorité : travail soigné, respect des délais et transparence.</p>
+                <p>Avec MCHICHITA THERM SOLUTION, bénéficiez d'un service personnalisé et de conseils avisés pour le choix de vos équipements.</p>
+                <div class="contact-details">
+                    <div><i class="fas fa-phone-alt"></i> 06.61.99.62.50</div>
+                    <div><i class="fas fa-envelope"></i> mchichitathermsolutions@gmail.com</div>
+                    <div><i class="fas fa-map-marker-alt"></i> Casablanca, Maroc</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Quelques réalisations</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="image5.jpeg" alt="Installation chaudière">
+            </div>
+            <div class="gallery-item">
+                <img src="image2.jpeg" alt="Maintenance chaudière">
+            </div>
+            <div class="gallery-item">
+                <img src="image1.jpeg" alt="Technicien chauffage">
+            </div>
+            <div class="gallery-item">
+                <img src="image6.jpeg" alt="Chaudière moderne">
+            </div>
+             <div class="gallery-item">
+                <img src="image3.jpeg" alt="Chaudière moderne">
+            </div> <div class="gallery-item">
+                <img src="image4.jpeg" alt="Chaudière moderne">
+            </div>
+        </div>
+    </section>
+
+    <section class="zone">
+        <h2>Zone d'intervention</h2>
+        <p>Nous intervenons dans tout le Maroc</p>
+
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Contactez-nous</h2>
+            <div class="sub">Pour un devis ou une intervention, appelez ou envoyez un message.</div>
+
+            <div class="contact-info-large">
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="label">Téléphone</div>
+                    <a href="tel:+212661996250" class="value">06.61.99.62.50</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <div class="label">Email</div>
+                    <a href="mailto:mchichitathermsolutions@gmail.com" class="value">mchichitathermsolutions@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-user"></i>
+                    <div class="label">Responsable</div>
+                    <div class="value">ELHASSNI Abdelmalek</div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Envoyez une demande</h3>
+                <form id="devisForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone *</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Précisez votre besoin..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Envoyer la demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo" style="justify-content: center; margin-bottom: 1rem; font-size: 1.8rem;">
+                MCHICHITA <span>THERM</span><br>
+                <small style="color:white;">SOLUTION</small>
+            </div>
+            <p>Installation et Maintenance de Chaudières </p>
+            <div class="footer-links">
+                <a href="#">Mentions légales</a>
+                <a href="#">Politique de confidentialité</a>
+            </div>
+            <p>&copy; 2025 MCHICHITA THERM SOLUTION - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- Popup de confirmation -->
+    <div class="popup" id="confirmationPopup">
+        <i class="fas fa-check-circle" style="font-size: 4rem; color: #4CAF50; margin-bottom: 1rem;"></i>
+        <h3 style="color: var(--primary-blue);">Message envoyé !</h3>
+        <p>Nous vous répondrons dans les plus brefs délais.</p>
+        <button onclick="closePopup()" class="btn-primary" style="margin-top: 1rem;">Fermer</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <script>
+        // Menu mobile
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Formulaire
+        document.getElementById('devisForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            if (!name || !phone) {
+                alert('Veuillez remplir les champs obligatoires (*)');
+                return;
+            }
+            document.getElementById('confirmationPopup').classList.add('active');
+            document.getElementById('overlay').classList.add('active');
+            this.reset();
+        });
+
+        function closePopup() {
+            document.getElementById('confirmationPopup').classList.remove('active');
+            document.getElementById('overlay').classList.remove('active');
+        }
+
+        document.getElementById('overlay').addEventListener('click', closePopup);
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePopup(); });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
